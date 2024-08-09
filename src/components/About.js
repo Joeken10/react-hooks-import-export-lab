@@ -1,19 +1,22 @@
-import React from 'react'
-import {image} from "../data/user";
+import React from "react";
+import Links from "./Links";
 
+function About({ bio, github, linkedin }) {
+  let bioContent;
+  if (bio) {
+    bioContent = <p>{bio}</p>;
+  }
 
-function About() {
   return (
     <div id="about">
-      
-      <h2>About Me</h2>
-      <p>I Made This</p>
-      <img src={image} alt="I made this" />
-
+      <h2>About</h2>
+      {bioContent}
+      <Links github={github} linkedin={linkedin} />
     </div>
-    
-  )
+  );
 }
 
-export default About
+export default About;
+
+
 
